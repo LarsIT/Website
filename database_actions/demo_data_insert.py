@@ -5,8 +5,8 @@ import sys
 # Add superior folder to python-path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import Website.private_data.mysql_login_prvt as login
-import Website.private_data.paths_prvt as paths
+import private_data.mysql_login_prvt as login
+import private_data.paths_prvt as paths
 import mysql.connector
 
 
@@ -37,8 +37,12 @@ for pic in os.listdir(image_folder):
 cursor = connection.cursor()
 
 insert_query = """INSERT INTO detmold_demo (id, name, photo) VALUES (%s, %s, %s)"""
-
-cursor.executemany(insert_query, data)
+try:
+    
+    cursor.executemany(insert_query, data)
+except Exception as e:
+    print(e)
+    
 connection.commit()
 
 cursor.close()
