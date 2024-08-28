@@ -1,9 +1,13 @@
 # Insertion of demo data
 
+import os
+import sys
+# Add superior folder to python-path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import Website.private_data.mysql_login_prvt as login
 import Website.private_data.paths_prvt as paths
 import mysql.connector
-import os
 
 
 connection = mysql.connector.connect(
@@ -13,7 +17,7 @@ connection = mysql.connector.connect(
     database = login.database
 )
 
-def convert_to_blob(file_path: str):
+def convert_to_blob(file_path: str) -> bytes:
     with open(file_path, "rb") as file:
         blob = file.read()
         return blob
