@@ -1,5 +1,7 @@
-import Website.mysql_login_prvt as login
-import Website.paths_prvt as paths
+# Insertion of demo data
+
+import Website.private_data.mysql_login_prvt as login
+import Website.private_data.paths_prvt as paths
 import mysql.connector
 import os
 
@@ -16,10 +18,11 @@ def convert_to_blob(file_path: str):
         blob = file.read()
         return blob
 
-image_folder = paths.image_folder
 
+image_folder = paths.image_folder
 i: int = 0
 data: list= []
+
 for pic in os.listdir(image_folder):
     i += 1
     name = pic[:-4]
