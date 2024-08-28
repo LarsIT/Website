@@ -16,3 +16,7 @@ Website
 |
 └──Photos
 ```
+
+## Process
+
+I set up a demo database with some images as BLOB (Binary Large Object) files locally. When the entire Website is done, this database will be migrated to an old laptop of mine that has been repurposed to a server.
