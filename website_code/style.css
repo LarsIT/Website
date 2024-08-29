@@ -8,7 +8,7 @@
     list-style: none;
 }
 
-header{
+#header{
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -212,6 +212,7 @@ section{
     width: 80%;
     max-width: 600px;
     position: relative;
+    border-radius: 2rem;
 }
 
 .close-button {
@@ -225,3 +226,4 @@ section{
 .close-button:hover {
     color: red;
 }
+
