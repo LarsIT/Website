@@ -37,8 +37,9 @@ for pic in os.listdir(image_folder):
 cursor = connection.cursor()
 
 insert_query = """INSERT INTO detmold_demo (id, name, photo) VALUES (%s, %s, %s)"""
+
+# Duplicate entry catch
 try:
-    
     cursor.executemany(insert_query, data)
 except Exception as e:
     print(e)

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Lars</span></a>
+    
+        <ul class="navigation-links">
+            <li>
+                <a href="index.html">About</a>
+            </li>
+            <li>
+                <a href="programming.html">Programming</a>
+            </li>
+            <li>
+                <a href="photos.html">Photos</a>
+            </li>
+            <li>
+                <a href="music.html">Music</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        
+        <button class="visit-button">Visit Github</button>
+    </header>
+
+    <section id="content" class="content">
+        <div class="content-container">
+            <div class="project" data-modal-target="#modal1">
+                <h3>Project 1</h3>
+                <p>Brief description of Project 1</p>
+            </div>
+            <div class="project" data-modal-target="#modal2">
+                <h3>Project 2</h3>
+                <p>Brief description of Project 2</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Modal Structures -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close-button" data-modal-close="#modal1">&times;</span>
+            <h2>Project 1: Advanced Data Visualization</h2>
+            <p>This project involved creating interactive data visualizations using D3.js. The goal was to present complex datasets in a user-friendly manner.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Interactive charts and graphs</li>
+                <li>Dynamic filtering and data exploration</li>
+                <li>Customizable visualizations</li>
+            </ul>
+            <p>Here's an example of the data visualization:</p>
+            <img src="https://via.placeholder.com/500" alt="Project 1 Visualization">
+            <p>For more details, visit the <a href="https://example.com/project1" target="_blank">Project 1 Documentation</a>.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close-button" data-modal-close="#modal2">&times;</span>
+            <h2>Project 2: Personal Blog Platform</h2>
+            <p>This project focused on developing a personal blog platform using WordPress. It included custom themes and plugins to enhance the user experience.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Custom WordPress theme</li>
+                <li>Responsive design</li>
+                <li>SEO optimization</li>
+            </ul>
+            <p>Here's a screenshot of the blog platform:</p>
+            <img src="https://via.placeholder.com/500" alt="Project 2 Blog">
+            <p>For more details, visit the <a href="https://example.com/project2" target="_blank">Project 2 Documentation</a>.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
